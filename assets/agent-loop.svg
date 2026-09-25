@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="240" viewBox="0 0 1200 240" role="img" aria-label="Agent loop: task, plan, tools, observe, evaluate">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0b1220"/>
+      <stop offset="1" stop-color="#101c33"/>
+    </linearGradient>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <rect width="1200" height="240" rx="14" fill="url(#bg)"/>
+  <rect x="0.5" y="0.5" width="1199" height="239" rx="13.5" fill="none" stroke="#1e293b"/>
+
+  <text x="600" y="52" text-anchor="middle" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="26" font-weight="600" fill="#e2e8f0">Agent Systems · plan → act → observe → evaluate</text>
+
+  <!-- nodes -->
+  <g font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="17" font-weight="600" text-anchor="middle">
+    <rect x="70"  y="110" width="170" height="56" rx="10" fill="#111f38" stroke="#2563eb"/>
+    <text x="155" y="144" fill="#93c5fd">Task</text>
+
+    <rect x="290" y="110" width="170" height="56" rx="10" fill="#111f38" stroke="#7c3aed"/>
+    <text x="375" y="144" fill="#c4b5fd">Planner</text>
+
+    <rect x="510" y="110" width="170" height="56" rx="10" fill="#111f38" stroke="#0d9488"/>
+    <text x="595" y="144" fill="#5eead4">Tools / MCP</text>
+
+    <rect x="730" y="110" width="170" height="56" rx="10" fill="#111f38" stroke="#d97706"/>
+    <text x="815" y="144" fill="#fcd34d">Trace</text>
+
+    <rect x="950" y="110" width="180" height="56" rx="10" fill="#111f38" stroke="#dc2626"/>
+    <text x="1040" y="144" fill="#fca5a5">Evals</text>
+  </g>
+
+  <!-- arrows -->
+  <g stroke="#64748b" stroke-width="2" fill="none">
+    <line x1="240" y1="138" x2="284" y2="138" marker-end="url(#arrow)"/>
+    <line x1="460" y1="138" x2="504" y2="138" marker-end="url(#arrow)"/>
+    <line x1="680" y1="138" x2="724" y2="138" marker-end="url(#arrow)"/>
+    <line x1="900" y1="138" x2="944" y2="138" marker-end="url(#arrow)"/>
+    <!-- eval feedback loop back to planner -->
+    <path d="M 1040 110 C 1040 66, 375 66, 375 104" marker-end="url(#arrow)"/>
+  </g>
+  <text x="707" y="84" text-anchor="middle" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="14" fill="#94a3b8">regression suite</text>
+</svg>
